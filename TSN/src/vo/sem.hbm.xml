@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="vo.seminarVO"  table="seminar_Details">
+   
+   	<id name="seminarID" type="int" column="seminar_ID" >
+   		<generator class="increment"/>
+  	</id>
+	
+  	<property name="deliveredid" column="Delivered_ID" />
+	<property name="countryid"  column="Country_ID" />
+	<property name="stateid"   column="State_ID" />
+	<property name="cityid"  column="City_ID" />
+	<property name="seminaroption"  column="Seminar_Option" />
+	<property name="fees"  column="Seminar_Fees" />
+	<property name="manageby"  column="Manage_BY" />
+	<property name="seminarname"  column="Seminar_Name" />
+	<property name="subject"  column="Subject" />
+	<property name="description"  column="Description" />
+	<property name="deliveredrole"  column="Delivered_Role" />
+    <property name="date"  column="Seminar_Date" />
+	<property name="time"  column="Seminar_Time" />
+	<property name="venue"  column="Venue_place" />
+	<property name="currency"  column="Currency_value" />
+	<property name="seminartype"  column="Seminar_Type" />
+	<property name="attendedby"  column="Attended_BY" />
+	<property name="rating"  column="Rating_evaluation" />
+	<property name="verify"  column="Verify_Details" />
+  
+  <many-to-one name="userregistervo" column="Delivered_ID" insert="false" update="false" class="vo.UserRegisterVO"></many-to-one>
+  <many-to-one name="userregistervo1" column="Manage_BY" insert="false" update="false" class="vo.UserRegisterVO"></many-to-one>
+  <many-to-one name="cityvo" column="City_ID" insert="false" update="false" class="vo.cityVo"></many-to-one>
+ </class>
+</hibernate-mapping>

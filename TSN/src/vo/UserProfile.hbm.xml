@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="vo.UserProfileVO" table="User_Profile">
+   
+   	<id name="id" type="int" column="newID" >
+   		<generator class="increment"/>
+  	</id>
+	
+	<property name="profileID" type="int" column="User_ID" />
+	<property name="firstname" type="string" column="First_Name" />
+	<property name="lastname" type="string" column="Last_Name" />
+	<property name="homeaddress" type="string" column="Home_Address" />
+	<property name="experience" type="string" column="Experience_Since" />
+	<property name="companyname" type="string" column="Company_Name" />
+	<property name="companyaddress" type="string" column="Company_Address" />
+	<property name="country" type="string" column="Country" />
+	<property name="gender" type="string" column="Gender" />
+	<property name="group" type="string" column="Group" />
+	<property name="phone" type="string" column="Phone" />
+	<property name="email" type="string" column="Email" />
+	<property name="website" type="string" column="Website_Name" />
+	
+	
+</class>
+</hibernate-mapping>

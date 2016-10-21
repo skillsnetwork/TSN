@@ -1,0 +1,81 @@
+    <link href="bootstrap-combined.min.css" rel="stylesheet">
+    <link href="build/toastr.css" rel="stylesheet" type="text/css" />
+<body class="container">
+<section class="row"  style="display: none;">
+    <div class="well row">
+        <div class="row">
+         
+            <div class="span2">
+                <div class="control-group" id="toastTypeGroup">
+                    <div class="controls">
+                        <label>Toast Type</label>
+                        <label class="radio">
+                            <input type="radio" name="toasts" value="success" checked />Success
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="toasts" value="info" />Info
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="toasts" value="warning" />Warning
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="toasts" value="error" />Error
+                        </label>
+                    </div>
+                </div>
+                <div class="control-group" id="positionGroup">
+                    <div class="controls">
+                        <label>Position</label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-top-right" checked />Top Right
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-bottom-right" />Bottom Right
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-bottom-left" />Bottom Left
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-top-left" />Top Left
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-top-full-width" />Top Full Width
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-bottom-full-width" />Bottom Full Width
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-top-center" />Top Center
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-bottom-center" />Bottom Center
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<script src="jquery.min.js"></script>
+<script src="toastr.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var getMessage = function () {
+            var msgs = ['My name is Inigo Montoya. You killed my father. Prepare to die!'];
+
+            return msgs;
+        };
+            var shortCutFunction = $("#toastTypeGroup input:radio:checked").val();
+    
+            toastr.options = {
+                onclick: null
+            };
+
+            toastr[shortCutFunction](getMessage); // Wire up an event handler to a button in the toast, if it exists
+    });
+</script>
+</body>
+</html>

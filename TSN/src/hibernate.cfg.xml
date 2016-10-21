@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+  <property name="hibernate.connection.driver_class"> oracle.jdbc.driver.OracleDriver</property>
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+  <property name="hibernate.connection.username">SYSTEM</property>
+  <property name="hibernate.connection.password">bugfree</property>
+  <property name="hibernate.connection.pool_size">10</property>
+  <property name="show_sql">true</property>
+  <property name="dialect">org.hibernate.dialect.OracleDialect</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <mapping resource="vo/Registration.hbm.xml"/>
+  <mapping resource="vo/UserRegister.hbm.xml"/>
+  <mapping resource="vo/OTP.hbm.xml"/>
+  <mapping resource="vo/UserProfile.hbm.xml"/>
+  <mapping resource="vo/Profile.hbm.xml"/>
+   <mapping resource="vo/addblog.hbm.xml"/>
+   <mapping resource="vo/sem.hbm.xml"/>
+   <mapping resource="vo/state.hbm.xml"/>
+   <mapping resource="vo/city.hbm.xml"/>
+   <mapping resource="vo/country.hbm.xml"/>
+  </session-factory>
+  
+  </hibernate-configuration>

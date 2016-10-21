@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="vo.ProfileVO" table="UserProfile">
+   
+   	<id name="RegID" type="int" column="Reg_ID" >
+   		<generator class="increment"/>
+  	</id>
+
+	<property name="userprofileid" type="int" column="UserProfileID" />
+	<property name="firstname" type="string" column="First_Name" />
+	<property name="lastname" type="string" column="Last_Naame" />
+	<property name="compnayname" type="string" column="Company_Name" />
+	
+	
+	
+<!--   	<property name="FirstName"> -->
+<!--    		<column name="FirstName" /> -->
+<!--   	</property> -->
+  	
+<!--   	<property name="LastName"> -->
+<!--   		<column name="LastName"/> -->
+<!--   	</property> -->
+  	
+<!--   	<property name="EmailAdress"> -->
+<!--   		<column name="EmailAdress"/> -->
+<!--   	</property> -->
+  	
+<!--   	<property name="Password"> -->
+<!--   		<column name="Password"/> -->
+<!--   	</property> -->
+  	
+<!--   	<property name="ConfirmPassword"> -->
+<!--   		<column name="ConfirmPassword"/> -->
+<!--   	</property> -->
+  	
+<!--   	<property name="ContactNumber"> -->
+<!--   		<column name="ContactNumber"/> -->
+<!--   	</property> -->
+  	
+<!--   	<property name="Address"> -->
+<!--   		<column name="Address"/> -->
+<!--   	</property> -->
+  	
+
+<!--   	<property name="City"> -->
+<!--   		<column name="City"/> -->
+<!--   	</property> -->
+  	
+<!--   	<property name="State"> -->
+<!--   		<column name="State"/> -->
+<!--   	</property> -->
+  	
+<!--   	<property name="Country"> -->
+<!--   		<column name="Country"/> -->
+<!--   	</property> -->
+  	
+<!--   	<property name="Designation"> -->
+<!--   		<column name="Designation"/> -->
+<!--   	</property> -->
+  	
+  	
+  	  
+ </class>
+</hibernate-mapping>
